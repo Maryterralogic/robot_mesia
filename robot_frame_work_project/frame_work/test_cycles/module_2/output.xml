@@ -1,58 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230904 12:56:33.853" rpa="false" schemaversion="4">
-<suite id="s1" name="Login Testcase2" source="C:\Users\YasodhaS-3242\PycharmProjects\PythonProject\Robot_Frame_work\rampup_task_robot\myproject_root_folder\frame_work\test_cycles\module_2\login_testcase2.robot">
-<test id="s1-t1" name="TestCasse For Second Login" line="7">
-<try>
-<branch type="TRY">
-<kw name="Open Second Login Page">
-<msg timestamp="20230904 12:56:34.105" level="FAIL">No keyword with name 'Open Second Login Page' found.</msg>
-<status status="FAIL" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230905 17:30:00.720" rpa="false" schemaversion="4">
+<suite id="s1" name="Reg Testcase2" source="C:\Users\MesiaMary A-1957\PycharmProjects\robot_project\robot_frame_work_project\frame_work\test_cycles\module_2\reg_testcase2.robot">
+<test id="s1-t1" name="TestCasse For Second Registration Page" line="7">
+<kw name="Open Second Registration Page" library="register_po">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${reg_URL_2}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230905 17:30:01.060" level="INFO">Opening browser 'chrome' to base url 'https://www.letskodeit.com/register'.</msg>
+<status status="PASS" starttime="20230905 17:30:01.060" endtime="20230905 17:30:05.893"/>
 </kw>
-<kw name="Maximize Browser URL">
-<status status="NOT RUN" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<status status="PASS" starttime="20230905 17:30:01.060" endtime="20230905 17:30:05.893"/>
 </kw>
-<kw name="Login For Second URL Information">
-<status status="NOT RUN" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<kw name="Maximize Browser URL" library="common_keywords">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 17:30:05.895" endtime="20230905 17:30:06.017"/>
 </kw>
-<kw name="Wait For Time">
-<status status="NOT RUN" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 17:30:08.023" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230905 17:30:06.018" endtime="20230905 17:30:08.023"/>
 </kw>
-<kw name="Close Browser URL">
-<status status="NOT RUN" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<status status="PASS" starttime="20230905 17:30:05.895" endtime="20230905 17:30:08.023"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Login Successful !!!!!!</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<kw name="Second Registration Information" library="register_po">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_1_regFirstName}</arg>
+<arg>${reg_ValidFirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:08.027" level="INFO">Typing text 'mesia' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20230905 17:30:08.025" endtime="20230905 17:30:08.255"/>
 </kw>
-<status status="FAIL" starttime="20230904 12:56:34.089" endtime="20230904 12:56:34.105"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Login Fail .....</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_1_regLastName}</arg>
+<arg>${reg_ValidLastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:08.255" level="INFO">Typing text 'mary' into text field 'id:last_name'.</msg>
+<status status="PASS" starttime="20230905 17:30:08.255" endtime="20230905 17:30:08.477"/>
 </kw>
-<status status="PASS" starttime="20230904 12:56:34.105" endtime="20230904 12:56:34.105"/>
-</branch>
-<status status="PASS" starttime="20230904 12:56:34.089" endtime="20230904 12:56:34.105"/>
-</try>
-<status status="PASS" starttime="20230904 12:56:34.089" endtime="20230904 12:56:34.105"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_1_regEmail}</arg>
+<arg>${reg_validEmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:08.478" level="INFO">Typing text 'mesiamarysrr@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20230905 17:30:08.477" endtime="20230905 17:30:08.724"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_1_regPassword}</arg>
+<arg>${reg_ValidPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:08.726" level="INFO">Typing text 'mesiamary' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230905 17:30:08.725" endtime="20230905 17:30:08.947"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_1_regConfirmationPassword}</arg>
+<arg>${reg_ValidConformPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:08.947" level="INFO">Typing text 'mesiamary' into text field 'id:password_confirmation'.</msg>
+<status status="PASS" starttime="20230905 17:30:08.947" endtime="20230905 17:30:09.164"/>
+</kw>
+<status status="PASS" starttime="20230905 17:30:08.024" endtime="20230905 17:30:09.164"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230905 17:30:09.165" endtime="20230905 17:30:09.171"/>
+</kw>
+<kw name="Wait For Time" library="common_keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 17:30:11.179" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230905 17:30:09.172" endtime="20230905 17:30:11.179"/>
+</kw>
+<status status="PASS" starttime="20230905 17:30:09.171" endtime="20230905 17:30:11.180"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath:(//iframe[@title='reCAPTCHA'])[1]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230905 17:30:11.184" level="INFO">Selecting frame 'xpath:(//iframe[@title='reCAPTCHA'])[1]'.</msg>
+<status status="PASS" starttime="20230905 17:30:11.180" endtime="20230905 17:30:11.303"/>
+</kw>
+<kw name="Select Capcha" library="register_po">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_capcha_1_reg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:11.305" level="INFO">Clicking element 'xpath://span[@id='recaptcha-anchor']'.</msg>
+<status status="PASS" starttime="20230905 17:30:11.304" endtime="20230905 17:30:12.272"/>
+</kw>
+<status status="PASS" starttime="20230905 17:30:11.303" endtime="20230905 17:30:12.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 17:30:42.298" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20230905 17:30:12.280" endtime="20230905 17:30:42.299"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230905 17:30:42.300" endtime="20230905 17:30:42.311"/>
+</kw>
+<kw name="Click SignUp Button" library="register_po">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${txt_1_regSignUp}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230905 17:30:42.314" level="INFO">Clicking button 'xpath://input[@value='Sign Up']'.</msg>
+<msg timestamp="20230905 17:30:44.011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230905 17:30:44.012" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="submit" value="Sign Up" class="btn btn-default btn-block btn-md dynamic-button" tabindex="7" data-action="submit_signup"&gt; is not clickable at point (504, 617). Other element would receive the click: &lt;iframe title="recaptcha challenge expires in two minutes" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;amp;v=0hCdE87LyjzAkFO5Ff-v7Hj1&amp;amp;k=6Lc1jbQZAAAAAPeBZvkLPYZI2G1Fx3__lL1opdiY" name="c-6icnquofziby" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 400px; height: 580px;"&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F01B52A2+57122]
+	(No symbol) [0x00007FF6F012EA92]
+	(No symbol) [0x00007FF6EFFFE3AB]
+	(No symbol) [0x00007FF6F003D783]
+	(No symbol) [0x00007FF6F003BD5F]
+	(No symbol) [0x00007FF6F0039DC8]
+	(No symbol) [0x00007FF6F0038FD5]
+	(No symbol) [0x00007FF6F002F25F]
+	(No symbol) [0x00007FF6F0056FDA]
+	(No symbol) [0x00007FF6F002EB76]
+	(No symbol) [0x00007FF6F00571F0]
+	(No symbol) [0x00007FF6F006EB82]
+	(No symbol) [0x00007FF6F0056DB3]
+	(No symbol) [0x00007FF6F002D2B1]
+	(No symbol) [0x00007FF6F002E494]
+	GetHandleVerifier [0x00007FF6F045EF82+2849794]
+	GetHandleVerifier [0x00007FF6F04B1D24+3189156]
+	GetHandleVerifier [0x00007FF6F04AACAF+3160367]
+	GetHandleVerifier [0x00007FF6F0246D06+653702]
+	(No symbol) [0x00007FF6F013A208]
+	(No symbol) [0x00007FF6F01362C4]
+	(No symbol) [0x00007FF6F01363F6]
+	(No symbol) [0x00007FF6F01267A3]
+	BaseThreadInitThunk [0x00007FF80B3A7614+20]
+	RtlUserThreadStart [0x00007FF80BF026B1+33]
+</msg>
+<status status="FAIL" starttime="20230905 17:30:42.312" endtime="20230905 17:30:44.034"/>
+</kw>
+<status status="FAIL" starttime="20230905 17:30:42.311" endtime="20230905 17:30:44.034"/>
+</kw>
+<kw name="Wait For Time" library="common_keywords">
+<status status="NOT RUN" starttime="20230905 17:30:44.035" endtime="20230905 17:30:44.035"/>
+</kw>
+<kw name="Close Browser URL" library="common_keywords">
+<status status="NOT RUN" starttime="20230905 17:30:44.035" endtime="20230905 17:30:44.035"/>
+</kw>
+<status status="FAIL" starttime="20230905 17:30:01.059" endtime="20230905 17:30:44.035">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="submit" value="Sign Up" class="btn btn-default btn-block btn-md dynamic-button" tabindex="7" data-action="submit_signup"&gt; is not clickable at point (504, 617). Other element would receive the click: &lt;iframe title="recaptcha challenge expires in two minutes" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;amp;v=0hCdE87LyjzAkFO5Ff-v7Hj1&amp;amp;k=6Lc1jbQZAAAAAPeBZvkLPYZI2G1Fx3__lL1opdiY" name="c-6icnquofziby" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 400px; height: 580px;"&gt;&lt;/iframe&gt;
+  (Session info: chrome=116.0.5845.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F01B52A2+57122]
+	(No symbol) [0x00007FF6F012EA92]
+	(No symbol) [0x00007FF6EFFFE3AB]
+	(No symbol) [0x00007FF6F003D783]
+	(No symbol) [0x00007FF6F003BD5F]
+	(No symbol) [0x00007FF6F0039DC8]
+	(No symbol) [0x00007FF6F0038FD5]
+	(No symbol) [0x00007FF6F002F25F]
+	(No symbol) [0x00007FF6F0056FDA]
+	(No symbol) [0x00007FF6F002EB76]
+	(No symbol) [0x00007FF6F00571F0]
+	(No symbol) [0x00007FF6F006EB82]
+	(No symbol) [0x00007FF6F0056DB3]
+	(No symbol) [0x00007FF6F002D2B1]
+	(No symbol) [0x00007FF6F002E494]
+	GetHandleVerifier [0x00007FF6F045EF82+2849794]
+	GetHandleVerifier [0x00007FF6F04B1D24+3189156]
+	GetHandleVerifier [0x00007FF6F04AACAF+3160367]
+	GetHandleVerifier [0x00007FF6F0246D06+653702]
+	(No symbol) [0x00007FF6F013A208]
+	(No symbol) [0x00007FF6F01362C4]
+	(No symbol) [0x00007FF6F01363F6]
+	(No symbol) [0x00007FF6F01267A3]
+	BaseThreadInitThunk [0x00007FF80B3A7614+20]
+	RtlUserThreadStart [0x00007FF80BF026B1+33]
+</status>
 </test>
-<status status="PASS" starttime="20230904 12:56:33.853" endtime="20230904 12:56:34.105"/>
+<status status="FAIL" starttime="20230905 17:30:00.723" endtime="20230905 17:30:44.040"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login Testcase2">Login Testcase2</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Reg Testcase2">Reg Testcase2</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230904 12:56:34.089" level="ERROR">Error in file 'C:\Users\YasodhaS-3242\PycharmProjects\PythonProject\Robot_Frame_work\rampup_task_robot\myproject_root_folder\frame_work\test_cycles\module_2\login_testcase2.robot' on line 3: Resource file 'Robot_Frame_work\rampup_task_robot\myproject_root_folder\frame_work\resources\page_objects\login_po.robot' does not exist.</msg>
-<msg timestamp="20230904 12:56:34.089" level="ERROR">Error in file 'C:\Users\YasodhaS-3242\PycharmProjects\PythonProject\Robot_Frame_work\rampup_task_robot\myproject_root_folder\frame_work\test_cycles\module_2\login_testcase2.robot' on line 4: Resource file 'Robot_Frame_work\rampup_task_robot\myproject_root_folder\frame_work\resources\keywords\common_keywords.robot' does not exist.</msg>
 </errors>
 </robot>

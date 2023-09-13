@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    robot_frame_work_project/frame_work/resources/page_objects/login_po.robot
-Resource    robot_frame_work_project/frame_work/resources/keywords/common_keywords.robot
+Resource    ../../resources/page_objects/login_po.robot
+Resource    ../../resources/keywords/common_keywords.robot
 
 *** Test Cases ***
 TestCasse For Login

@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    robot_frame_work_project/frame_work/resources/variables/login_variables.robot
-Resource    robot_frame_work_project/frame_work/resources/variables/common_variables.robot
+Resource    ../variables/login_variables.robot
+Resource    ../variables/common_variables.robot
 *** Variables ***
 # Login Page Elements
 

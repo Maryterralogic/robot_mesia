@@ -1,12 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../variables/common_variables.robot
+Resource    HR_OS/common_variables
 
 *** Keywords ***
 
 Maximize Browser URL
     Maximize Browser Window
-    Sleep    2
+    Sleep    3
 
 Close Browser URL
     Close Browser
